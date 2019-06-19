@@ -1,0 +1,30 @@
+pipelineJob('CI_oracle') {
+
+definition  {
+
+cpsScm{
+ 
+ scm {
+ 
+ git {
+ 
+	branch('CI')
+	
+	remote {
+	
+	credentials('')
+	name('origin')
+	url('https://github.com/devops-team-92/jenkinsCItest.git')
+	}
+ 
+ }
+ 
+ }
+ 
+ scriptPath('CI-ORACLE')
+
+}
+
+}
+
+}
